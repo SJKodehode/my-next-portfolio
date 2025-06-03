@@ -129,23 +129,24 @@ export default function CannonBall({ width = 300, height = 300 }) {
     };
     window.addEventListener("keydown", handleKeyDown);
 
+    const parent = sceneRef.current;
     // 12) Cleanup on unmount
     return () => {
       canvasEl.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("keydown", handleKeyDown);
 
+      if (parent) {
+        Array.from(parent.children).forEach((child) => {
+          parent.removeChild(child);
+        });
+      }
       Runner.stop(runner);
       Render.stop(render);
       World.clear(world, false);
       Engine.clear(engine);
 
       // Remove all children (including <canvas>) from sceneRef
-      const parent = sceneRef.current;
-      if (parent) {
-        Array.from(parent.children).forEach((child) => {
-          parent.removeChild(child);
-        });
-      }
+      
     };
   }, [width, height, bg, primary, secondary]);
 

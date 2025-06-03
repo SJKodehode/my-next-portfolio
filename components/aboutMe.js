@@ -7,7 +7,7 @@ export default function AboutMe() {
 
                 <div className="w-[30rem]">
                     <p className="mt-16 mb-4">A front-end developer with a passion for bold and exciting design. I have en extensive knowledge in modern web technologies that i use to get a fully tailored solution. </p>
-                    <p className="mb-8 opacity-85">When I'm not coding, I explore new technologies, stay updated with industry trends, and experiment with personal projects to apply what I've learned.</p>
+                    <p className="mb-8 opacity-85">When I&apos;m not coding, I explore new technologies, stay updated with industry trends, and experiment with personal projects to apply what I&apos;ve learned.</p>
                 </div>
                 <div className=" rounded-4xl">
                     <CannonBall        

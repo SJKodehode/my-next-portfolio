@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --bg:        #ffffff;
+  --primary:   #000000;
+  --secondary: #888888;
+  --accent:    #ff0000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a0a;
+    --primary: #ededed;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--primary);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn {
+  background: var(--secondary);
+  color: var(--accent);
+}

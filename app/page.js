@@ -9,7 +9,7 @@ export default function Home() {
       
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-2">Pick a Color Theme</h2>
+        <h2 className="text-2xl font-semibold mb-2">Front-end developer with a love for UI/UX</h2>
         
         
       </section>

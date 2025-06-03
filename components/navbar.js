@@ -21,9 +21,9 @@ export default function Navbar() {
           key={p.id}
           onClick={() => selectPalette(p)}
           className={`
-            flex flex-col overflow-hidden rounded
-            ${p.id === selected.id ? 'ring-2 ring-offset-1 ring-accent' : ''}
-            focus:outline-none
+            flex flex-col overflow-hidden w-fit rounded opacity-75 hover:opacity-100 transition transform duration-75 ease-out hover:scale-110
+            ${p.id === selected.id ? ' opacity-100  font-semibold transition transform scale-115 hover:scale-[115%]' : ''}
+            
           `}
         >
           {[p.background, p.primary, p.secondary, p.accent].map((c, i) => (

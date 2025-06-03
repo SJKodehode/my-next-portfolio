@@ -4,7 +4,7 @@
 import { useEffect, useRef } from "react";
 import { useTheme } from "./themeProvider";
 
-export default function CannonBall({ width = 300, height = 300 }) {
+export default function CannonBall({ width = 500, height = 500 }) {
   const { colors } = useTheme();
   const bg        = colors[0];
   const primary   = colors[1];
@@ -58,14 +58,14 @@ export default function CannonBall({ width = 300, height = 300 }) {
     // 6) Stack of cubes
     const cubeSize = 40;
     const boxes = Composites.stack(
-      180, height - 80 - 5 * cubeSize,
-      5, 5,
+      180, 0,
+      12, 3,
       0, 0,
       (x, y) =>
         Bodies.rectangle(x, y, cubeSize, cubeSize, {
           restitution: 0.4,
           friction: 0.02,
-          render: { fillStyle: secondary },
+          render: { fillStyle: primary },
         })
     );
     World.add(world, boxes);
@@ -89,7 +89,7 @@ export default function CannonBall({ width = 300, height = 300 }) {
       const dx  = targetX - cannonX;
       const dy  = targetY - cannonY;
       const mag = Math.hypot(dx, dy) || 1;
-      const speed = 15;
+      const speed = 25;
       const vx = (dx / mag) * speed;
       const vy = (dy / mag) * speed;
 
@@ -153,14 +153,16 @@ export default function CannonBall({ width = 300, height = 300 }) {
   return (
     <div
       ref={sceneRef}
-      className="flex justify-center"
+      className=" z-0 mt-40"
       style={{
         position: "relative",
         width : `${width}px`,
         height: `${height}px`,
         backgroundColor: bg,
+        
       }}
     >
+      
       {/* Press "F" to shoot a cannonball toward the cursor */}
     </div>
   );

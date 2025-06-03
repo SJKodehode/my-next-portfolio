@@ -19,7 +19,7 @@ export default function ThemeProvider({ children }) {
     palettes[0].accent,
   ]);
 
-  // on mount: load saved ID → setSelected + reset its colors
+  // on mount: load saved ID setSelected + reset its colors
   useEffect(() => {
     const saved = localStorage.getItem('themePalette');
     const found = palettes.find(p => p.id === saved) || palettes[0];
@@ -32,7 +32,7 @@ export default function ThemeProvider({ children }) {
     ]);
   }, []);
 
-  // whenever `colors` or `selected.id` changes → apply to DOM
+  // whenever `colors` or `selected.id` changes, apply to DOM
   useEffect(() => {
     applyPalette({ 
       background: colors[0], 
@@ -43,13 +43,12 @@ export default function ThemeProvider({ children }) {
     });
   }, [colors, selected.id]);
 
-  // click‐to‐select a new palette → resets colors back to its defaults
   function selectPalette(p) {
     setSelected(p);
     setColors([ p.background, p.primary, p.secondary, p.accent ]);
   }
 
-  // on SPACE → Fisher-Yates shuffle of `colors` array
+  // Fisher-Yates shuffle of `colors` array
   useEffect(() => {
     const onKey = e => {
       if (e.code === 'Space') {

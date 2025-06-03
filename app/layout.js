@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Skills from '@/components/skills';
 import AboutMe from '@/components/aboutMe';
 import WreckingBall from '@/components/wreckingBall';
+import MouseBubble from '@/components/mouseBubble';
 export const metadata = {
   title: 'My Portfolio',
   description: 'Built with Next.js and Tailwind',
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={rethinkSans.className}>
       <body className="flex flex-col">
         <ThemeProvider>
+          <MouseBubble />
           <Navbar />
 
           {/* shift your main content over so it doesn’t sit under the sidebar */}

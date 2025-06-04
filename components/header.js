@@ -10,7 +10,7 @@ export default function Header() {
     const accent = colors[3]
     return (
         <div className=" flex my-9 justify-center">
-            <nav className="flex justify-start sm:ml-28 ml-8 font-semibold md:text-2xl xl:text-5xl">
+            <nav className="flex justify-start sm:ml-32 ml-8 font-semibold md:text-2xl xl:text-5xl">
                 <div>
                     <Link href={'/'}>
                     <p>HOME</p>

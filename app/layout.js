@@ -25,11 +25,9 @@ export default function RootLayout({ children }) {
           <Navbar />
 
           {/* shift your main content over so it doesn’t sit under the sidebar */}
-          <main className="ml-10 flex-grow transition-all">
+          <main className=" flex-grow transition-all">
           <Header />
             {children}
-          <Skills />
-          <AboutMe />
           
           </main>
         </ThemeProvider>

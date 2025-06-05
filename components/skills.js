@@ -13,7 +13,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center h-[50vh] justify-center py-12"
+      className="flex flex-col items-center h-fit py-32 justify-center"
       style={{
         backgroundColor: accentColor,
         color: textColor, // “currentColor” for inline SVGs + tekst

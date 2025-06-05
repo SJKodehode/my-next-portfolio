@@ -40,11 +40,11 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <div className="flex relative flex-col justify-center w-full h-[60vh] items-center">
+    <div className="flex relative flex-col justify-center w-full sm:h-[60vh] h-dvh items-center">
       <h2 className="text-3xl mb-16 font-bold">About Me</h2>
 
-      <div className="w-fit flex text-lg font-normal gap-8">
-        <div className="w-[30rem] flex flex-col justify-center rounded-4xl px-8 gap-3 py-8 z-10"
+      <div className=" flex sm:flex-row flex-col-reverse text-lg font-normal gap-8">
+        <div className="max-w-[30rem] flex flex-col justify-center rounded-4xl px-8 gap-3 py-8 z-10 mx-4"
              style={{
                 backgroundColor: colors[1],
                 color: colors[0]
@@ -82,10 +82,10 @@ export default function AboutMe() {
         </div>
         */}
 
-        <div className="rounded-4xl overflow-hidden">
+        <div className="rounded-4xl overflow-hidden mx-4 sm:w-60 self-center">
           <Image
             src="/images/chess-img.jpg"
-            width={240}
+            width={500}
             height={500}
             alt="Chess image of me"
           />

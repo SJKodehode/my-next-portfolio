@@ -21,10 +21,10 @@ export default function Home() {
 
   return (
     <main>
-      <div className="p-8 flex flex-col justify-top items-left ml-24 h-[100vh]">
+      <div className="p-8 flex flex-col md:justify-around justify-center -mt-20 md:mt-0 items-left md:ml-24 h-[100vh]">
         {/* Fornavn slidere inn fra venstre */}
         <motion.h1
-          className="text-[10vw] font-semibold mb-4"
+          className="md:text-[10vw] text-6xl font-semibold"
           variants={nameVariants}
           initial="hiddenLeft"
           animate="visible"
@@ -35,7 +35,7 @@ export default function Home() {
 
         {/* Etternavn slidere inn fra høyre, med litt delay */}
         <motion.h1
-          className="text-[10vw] font-semibold mb-4 w-full text-right"
+          className="md:text-[10vw] text-6xl font-semibold mb-4 w-full text-right"
           variants={nameVariants}
           initial="hiddenBottom"
           animate="visible"
@@ -52,7 +52,7 @@ export default function Home() {
           animate="visible"
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h2 className="text-2xl font-semibold mb-2">
+          <h2 className="md:text-2xl font-semibold mb-2">
             Front-end developer with a love for UI/UX
           </h2>
         </motion.section>

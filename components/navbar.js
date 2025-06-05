@@ -34,7 +34,7 @@ export default function Navbar() {
   };
 
   return (
-    <div>
+    <div className='flex justify-center w-dvw'>
       {showArrow && !isExpanded && (
         <motion.button
           onClick={() => setIsExpanded(true)}
@@ -42,12 +42,12 @@ export default function Navbar() {
           animate={{ scale: 1, x: 0 }}
           transition={{ type: 'spring', stiffness: 300, damping: 20, delay: 0.2 }}
           className="
-            fixed left-0 top-1/2 transform -translate-y-1/2
+            fixed left-0 top-5/6 mt-24 md:mt-0 md:top-1/2 transform -translate-y-1/2
             z-50 p-2 rounded-r-md bg-white/80 backdrop-blur-sm
             border border-gray-200
           "
         >
-          {/* Simple SVG arrow */}
+          {/* Enkel SVG‐pil */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-4 text-gray-600"
@@ -71,11 +71,12 @@ export default function Navbar() {
         variants={navVariants}
         transition={{ type: 'spring', stiffness: 100, duration: 0.2 }}
         className="
-          fixed left-0 bottom-0 sm:w-24 w-full z-40
-          flex-wrap overflow-hidden bg-white backdrop-blur-lg ml-4 mr-4 h-fit
-          border-r border-gray-200
-          grid grid-cols-5 sm:flex sm:flex-col items-center
-          py-8 gap-5 sm:h-fit px-3 text-gray-600 font-medium rounded-[2.6rem] my-4
+          fixed z-40
+          
+          bottom-0 flex lg:flex-col lg:left-0 lg:h-[95vh] flex-nowrap overflow-x-scroll lg:overflow-hidden gap-2 m-3 justify-around p-6 lg:p-2 lg:w-fit w-[90vw] scroll-smooth
+          bg-gray-100 sm:border-r border-gray-200 border-2
+           sm:h-auto
+          text-gray-600 font-medium rounded-[1rem]  
         "
       >
         {palettes.map((p) => {
@@ -85,32 +86,32 @@ export default function Navbar() {
             <motion.button
               key={p.id}
               onClick={() => selectPalette(p)}
-              initial={{ opacity: 0.75, scale: 1, x:0 }}
+              initial={{ opacity: 0.75, scale: 1, x: 0 }}
               animate={{
                 opacity: isSelected ? 1 : 0.75,
                 scale: isSelected ? 1.15 : 1,
-                x: isSelected ? 2 : 0,
+                y: isSelected ? -2 : 0,
               }}
               whileHover={{
                 opacity: 1,
                 scale: isSelected ? 1.15 : 1.1,
-                x: 4,
-                
+                y: -4,
               }}
               transition={{ type: 'spring', stiffness: 100, duration: 0.2 }}
               className="
-                flex flex-col overflow-hidden w-fit rounded
+                flex flex-col flex-shrink-0 items-center
+                overflow-hidden w-28 lg:w-20
               "
             >
               {[p.background, p.primary, p.secondary, p.accent].map((c, i) => (
                 <div
                   key={i}
-                  className="w-8 h-2 self-center"
+                  className="w-8 h-2"
                   style={{ backgroundColor: c }}
                 />
               ))}
               <p
-                className="text-xs mt-1"
+                className="text-xs mt-1 text-center"
                 style={{ fontWeight: isSelected ? 600 : 400 }}
               >
                 {p.name}
@@ -119,6 +120,9 @@ export default function Navbar() {
           );
         })}
       </motion.nav>
+
+      {/* Skjuler scrollbar‐visningen ved å sette bredde/høyde til 0 */}
+
     </div>
   );
 }

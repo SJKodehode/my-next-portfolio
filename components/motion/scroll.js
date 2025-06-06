@@ -60,11 +60,12 @@ const container = {
 const cardContainer = {
   overflow: "hidden",
   display: "flex",
+  margin: "100px auto",
   justifyContent: "center",
   alignItems: "center",
   position: "relative",
   paddingTop: 20,
-  marginBottom: -120,
+ 
 };
 
 const splash = {
@@ -95,12 +96,7 @@ const card = {
  */
 
 const food = [
-  ["🍅", 340, 10],
-  ["🍊", 20, 40],
-  ["🍋", 60, 90],
-  ["🍐", 80, 120],
-  ["🍏", 100, 140],
-  ["🫐", 205, 245],
-  ["🍆", 260, 290],
-  ["🍇", 290, 320],
+  ["UI", 30, 10],
+  ["UX", 50, 100],
+
 ];

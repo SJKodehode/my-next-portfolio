@@ -4,6 +4,7 @@
 import * as motion from 'motion/react-client';
 import Skills from "@/components/skills";
 import AboutMe from "@/components/aboutMe";
+import ScrollTriggered from '@/components/motion/scroll';
 
 export default function Home() {
   // Variants for fornavn/etternavn
@@ -21,10 +22,10 @@ export default function Home() {
 
   return (
     <main>
-      <div className="p-8 flex flex-col md:justify-around justify-center -mt-20 md:mt-0 items-left md:ml-24 h-[100vh]">
+      <div className="p-8 flex flex-col md:justify-around justify-center -mt-20 md:-mt-10 items-left h-[100vh]">
         {/* Fornavn slidere inn fra venstre */}
         <motion.h1
-          className="md:text-[10vw] text-6xl font-semibold"
+          className="md:text-[11vw] text-6xl font-semibold"
           variants={nameVariants}
           initial="hiddenLeft"
           animate="visible"
@@ -35,7 +36,7 @@ export default function Home() {
 
         {/* Etternavn slidere inn fra høyre, med litt delay */}
         <motion.h1
-          className="md:text-[10vw] text-6xl font-semibold mb-4 w-full text-right"
+          className="md:text-[11vw] text-6xl font-semibold mb-4 w-full text-right"
           variants={nameVariants}
           initial="hiddenBottom"
           animate="visible"

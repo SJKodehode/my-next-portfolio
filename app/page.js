@@ -5,6 +5,7 @@ import * as motion from 'motion/react-client';
 import Skills from "@/components/skills";
 import AboutMe from "@/components/aboutMe";
 import ScrollTriggered from '@/components/motion/scroll';
+import Rotate from '@/components/motion/rotate';
 
 export default function Home() {
   // Variants for fornavn/etternavn
@@ -22,7 +23,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="p-8 flex flex-col md:justify-around justify-center -mt-20 md:-mt-10 items-left h-[100vh]">
+      <div className="p-8 flex flex-col md:justify-around justify-center -mt-40 md:-mt-10 items-left h-[100vh]">
         {/* Fornavn slidere inn fra venstre */}
         <motion.h1
           className="md:text-[11vw] text-6xl font-semibold"
@@ -44,6 +45,7 @@ export default function Home() {
         >
           SØRHEIM
         </motion.h1>
+        <Rotate />
 
         {/* Undertekst fader inn med delay */}
         <motion.section

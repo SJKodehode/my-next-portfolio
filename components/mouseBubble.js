@@ -36,7 +36,7 @@ export default function MouseBubble() {
 
   return (
     <div
-      className="fixed pointer-events-none rounded-full border-[3px] transition-transform duration-100 ease-out"
+      className="fixed pointer-events-none rounded-full md:border-[3px] transition-transform duration-100 ease-out"
       style={{
         width: '90px',
         height: '90px',

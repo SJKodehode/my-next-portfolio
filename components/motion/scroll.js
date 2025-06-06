@@ -15,7 +15,7 @@ function Card({ emoji, hueA, hueB, i }) {
 
   return (
     <motion.div
-      className={`card-container-${i}`}
+      className={`card-container-${i} `}
       style={cardContainer}
       initial="offscreen"
       whileInView="onscreen"

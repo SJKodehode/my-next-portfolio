@@ -6,6 +6,7 @@ import Skills from "@/components/skills";
 import AboutMe from "@/components/aboutMe";
 import ScrollTriggered from '@/components/motion/scroll';
 import Rotate from '@/components/motion/rotate';
+import GitHubRepos from '@/components/gitHubRepos';
 
 export default function Home() {
   // Variants for fornavn/etternavn
@@ -71,6 +72,7 @@ export default function Home() {
       {/* AboutMe-seksjon med fade */}
       {/* ========================= */}
         <AboutMe />
+        <GitHubRepos />
     </main>
   );
 }

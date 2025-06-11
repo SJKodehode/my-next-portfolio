@@ -28,7 +28,7 @@ export async function GET() {
   try {
     // Hent opp til 100 repos
     const repos = await fetchJSON(
-      `https://api.github.com/users/${USER}/repos?per_page=100`
+      `https://api.github.com/users/${USER}/repos?per_page=10`
     );
 
     // Pakk ut bare det klienten trenger

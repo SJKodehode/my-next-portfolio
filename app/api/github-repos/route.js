@@ -5,7 +5,7 @@ import path from 'path';
 
 const USER = 'sjKodehode';
 const CACHE_PATH = path.join(process.cwd(), '.next', 'github_repos_cache.json');
-const CACHE_DURATION = 1000 * 60 * 60 * 24; // 24 timer
+const CACHE_DURATION = 86400; // 24 timer
 
 async function fetchJSON(url) {
   const res = await fetch(url, {

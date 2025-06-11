@@ -1,7 +1,7 @@
 // app/api/github-languages/route.js
 import { NextResponse } from 'next/server';
 
-export const revalidate = 60 * 60 * 24; // 24 timer
+export const revalidate = 86400; // 24 timer
 
 const USER = 'SJKodehode';
 const TOKEN = process.env.GITHUB_TOKEN;

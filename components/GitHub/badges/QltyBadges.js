@@ -40,7 +40,7 @@ export default function QltyBadges() {
   return (
     <section id="qlty-badges" className="py-12 flex flex-col items-center flex-wrap">
       <h2 className="text-3xl font-bold mb-6">Maintainability Ratings</h2>
-      <div className="flex flex-wrap max-w-3xl gap-4">
+      <div className="flex flex-wrap justify-center max-w-3xl gap-4">
         {qltyBadges.map(({ name, badgeUrl, projectUrl }) => (
           <a
             key={name}
@@ -51,7 +51,7 @@ export default function QltyBadges() {
             <img
               src={badgeUrl}
               alt={`${name} maintainability badge`}
-              className="h-12"
+              className="h-10"
             />
           </a>
         ))}

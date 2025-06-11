@@ -40,7 +40,7 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <div className="flex relative flex-col justify-center w-full sm:h-[60vh] h-dvh my-28 items-center">
+    <div className="flex relative flex-col justify-center w-full sm:h-[60vh] h-dvh min-h-[900px] lg:min-h-auto my-28 items-center">
       <h2 className="text-3xl mb-16 font-bold">About Me</h2>
 
       <div className=" flex sm:flex-row flex-col-reverse text-lg font-normal gap-8">

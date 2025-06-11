@@ -38,7 +38,7 @@ export default function CodeFactorBadges() {
   return (
     <section id="github-badges" className="py-12 flex flex-col items-center flex-wrap">
       <h2 className="text-3xl font-bold mb-6">CodeFactor Ratings</h2>
-      <div className="flex flex-wrap max-w-3xl gap-4">
+      <div className="flex flex-wrap justify-center max-w-3xl gap-4">
         {repoRatings.map(({ name, badgeUrl }) => (
           <a
             key={name}
@@ -49,7 +49,7 @@ export default function CodeFactorBadges() {
             <img
               src={badgeUrl}
               alt={`${name} quality badge`}
-              className="h-12"
+              className="h-10"
             />
           </a>
         ))}

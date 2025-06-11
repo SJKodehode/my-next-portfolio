@@ -38,17 +38,17 @@ export default function GitHubLanguagesChart() {
 
   return (
     <section
-      className="py-12 flex flex-col items-center"
+      className="py-24 flex flex-col items-center"
       style={{
         backgroundColor: colors[1],
         color: colors[0]
       }}
     >
-      <div className="max-w-7xl flex">
+      <div className="md:max-w-7xl flex flex-col items-center md:flex-row ">
         <div>
-          <h2 className="text-3xl font-bold mb-6">Språkstatistikk fra GitHub:</h2>
+          <h2 className="text-3xl text-center font-bold mb-6">Språkstatistikk fra GitHub:</h2>
           {languageData.length > 0 ? (
-            <PieChart width={400} height={400}>
+            <PieChart width={375} height={375}>
               <Pie
                 data={languageData}
                 dataKey="value"
@@ -71,7 +71,7 @@ export default function GitHubLanguagesChart() {
         </div>
         <GitHubRepos />
       </div>
-      <div className="flex gap-6 mt-8">
+      <div className="flex md:flex-row flex-col gap-6 mt-8">
         <CodeFactorBadges />
         <QltyBadges />
       </div>

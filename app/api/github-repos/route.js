@@ -26,19 +26,26 @@ export async function GET() {
   }
 
   try {
-    // Hent opp til 100 repos
+    // Hent opptil 100 repos
     const repos = await fetchJSON(
-      `https://api.github.com/users/${USER}/repos?per_page=10`
+      `https://api.github.com/users/${USER}/repos?per_page=100`
     );
 
-    // Pakk ut bare det klienten trenger
-    const result = repos.map(repo => ({
+    // Sorter synkende på størrelse (i KB)
+    repos.sort((a, b) => b.size - a.size);
+
+    // Ta kun de 10 største
+    const top10 = repos.slice(0, 10);
+
+    // Returner bare de feltene klienten trenger
+    const result = top10.map(repo => ({
       name: repo.name,
       url: repo.html_url,
       description: repo.description,
       language: repo.language,
       stars: repo.stargazers_count,
-      fork: repo.fork
+      fork: repo.fork,
+      size: repo.size,
     }));
 
     return NextResponse.json(result);

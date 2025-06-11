@@ -24,7 +24,7 @@ export default function GitHubLanguagesChart() {
         // data er [{ language, bytes }, …]
         const chartData = data.map(({ language, bytes }) => ({
           name: language,
-          value: bytes
+          value: bytes,
         }));
         setLanguageData(chartData);
       } catch (err) {

@@ -2,6 +2,7 @@
 'use client'
 
 import React from 'react';
+import { useTheme } from '@/components/themeProvider';
 
 const qltyBadges = [
   {
@@ -29,21 +30,30 @@ const qltyBadges = [
     badgeUrl: 'https://qlty.sh/badges/8ecbc90f-1878-4841-b6e7-9b43fc09a8c2/maintainability.svg',
     projectUrl: 'https://qlty.sh/gh/SJKodehode/projects/craftsvilla-react',
   },
-  {
-    name: 'netonnet-website',
-    badgeUrl: 'https://qlty.sh/badges/30aa3243-8ef8-4fbe-aa65-b073b830db42/maintainability.svg',
-    projectUrl: 'https://qlty.sh/gh/SJKodehode/projects/netonnet-website',
-  },
+//   {
+//     name: 'netonnet-website',
+//     badgeUrl: 'https://qlty.sh/badges/30aa3243-8ef8-4fbe-aa65-b073b830db42/maintainability.svg',
+//     projectUrl: 'https://qlty.sh/gh/SJKodehode/projects/netonnet-website',
+//   },
 ];
 
 export default function QltyBadges() {
+    const { colors } = useTheme()
   return (
     <section id="qlty-badges" className="py-12 flex flex-col items-center flex-wrap">
       <h2 className="text-3xl font-bold mb-6">Maintainability Ratings</h2>
       <div className="flex flex-wrap justify-center max-w-3xl gap-4">
         {qltyBadges.map(({ name, badgeUrl, projectUrl }) => (
-          <a
+            <div 
             key={name}
+            className='p-4 rounded-2xl min-w-3xs flex flex-col items-center justify-center' 
+            style={{
+            backgroundColor: colors[0],
+            color: colors[1],
+          }}>
+            <p>{name}</p>
+          <a
+            
             href={projectUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -54,6 +64,7 @@ export default function QltyBadges() {
               className="h-10"
             />
           </a>
+          </div>
         ))}
       </div>
     </section>

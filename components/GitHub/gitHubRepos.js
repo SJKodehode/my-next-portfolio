@@ -41,7 +41,7 @@ export default function GitHubRepos() {
         {repos.map((repo, idx) => (
           <li
             key={idx}
-            className="p-4 rounded-xl border"
+            className="p-4 rounded-xl border min-w-xs md:min-w-auto"
             style={{ borderColor: primary }}
           >
             <a
@@ -53,7 +53,7 @@ export default function GitHubRepos() {
               {repo.name}
             </a>
             <p className="text-sm mt-1">
-              ⭐ {repo.stars} · Sist commit: {repo.lastCommit}
+              ⭐ {repo.stars} · Description: {repo.description}
             </p>
           </li>
         ))}

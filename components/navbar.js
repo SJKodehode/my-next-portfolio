@@ -44,8 +44,8 @@ export default function Navbar() {
           transition={{ type: 'spring', stiffness: 300, damping: 20, delay: 0.2 }}
           className="
             fixed bottom-0 transform -translate-y-1/2
-            z-50 p-2 rounded-md bg-white/40 shadow-2xl
-            border border-gray-200 backdrop-blur-xs
+            z-50 p-2 rounded-xl bg-white/40 shadow-2xl
+            border border-gray-400 backdrop-blur-xs
           "
         >
           {/* Enkel SVG‐pil */}

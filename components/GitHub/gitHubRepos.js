@@ -36,7 +36,7 @@ export default function GitHubRepos() {
       className="py-12"
       style={{ backgroundColor: background, color: primary }}
     >
-      <h2 className="text-3xl font-bold mb-6 text-center">Mine GitHub-prosjekter</h2>
+      <h2 className="text-3xl font-bold mb-6 text-center">My GitHub projects</h2>
       <ul className="flex flex-wrap justify-center gap-8">
         {repos.map((repo, idx) => (
           <li
@@ -53,7 +53,7 @@ export default function GitHubRepos() {
               {repo.name}
             </a>
             <p className="text-sm mt-1">
-              ⭐ {repo.stars} · Description: {repo.description}
+              Description: {repo.description}
             </p>
           </li>
         ))}

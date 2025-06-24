@@ -46,7 +46,7 @@ export default function GitHubLanguagesChart() {
     >
       <div className="md:max-w-7xl flex flex-col items-center md:flex-row ">
         <div>
-          <h2 className="text-3xl text-center font-bold mb-6">Språkstatistikk fra GitHub:</h2>
+          <h2 className="text-3xl text-center font-bold mb-6">My GitHub language statistics:</h2>
           {languageData.length > 0 ? (
             <PieChart width={375} height={375}>
               <Pie

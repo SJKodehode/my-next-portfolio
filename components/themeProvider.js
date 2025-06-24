@@ -32,7 +32,7 @@ export default function ThemeProvider({ children }) {
     ]);
   }, []);
 
-  // whenever `colors` or `selected.id` changes, apply to DOM
+  
   useEffect(() => {
     applyPalette({ 
       background: colors[0], 
@@ -48,7 +48,7 @@ export default function ThemeProvider({ children }) {
     setColors([ p.background, p.primary, p.secondary, p.accent ]);
   }
 
-  // Fisher-Yates shuffle of `colors` array
+  // Fisher-Yates shuffle av fargene
   useEffect(() => {
     const onKey = e => {
       if (e.code === 'Space') {

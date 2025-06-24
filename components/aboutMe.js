@@ -58,7 +58,7 @@ export default function AboutMe() {
               cursor
               cursorStyle="|"
               typeSpeed={typeSpeed}
-              delaySpeed={1000} /* Pause etter at første er ferdig (kun visuell, ikke avgjør start av andre) */
+              delaySpeed={1000} /* Pause etter at første er ferdig. */
             />
           </p>
 
@@ -70,7 +70,7 @@ export default function AboutMe() {
                 cursor
                 cursorStyle="|"
                 typeSpeed={typeSpeed}
-                delaySpeed={1000} /* Pause etter at andre er ferdig om man vil loope */
+                delaySpeed={1000} 
               />
             </p>
           )}

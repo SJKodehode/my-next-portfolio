@@ -10,6 +10,7 @@ import GitHubRepos from '@/components/GitHub/gitHubRepos';
 import GitHubLanguagesChart from '@/components/GitHub/GitHubLanguagesChart';
 import CodeFactorBadges from '@/components/GitHub/badges/CodeFactorBadges';
 import QltyBadges from '@/components/GitHub/badges/QltyBadges';
+import ContactMe from '@/components/contactMe';
 
 export default function Home() {
   // Variants for fornavn/etternavn
@@ -28,7 +29,7 @@ export default function Home() {
   return (
     <main>
       <div className="p-8 flex flex-col md:justify-around justify-center -mt-40 md:-mt-10 items-left h-[100vh]">
-        {/* Fornavn slidere inn fra venstre */}
+        {/* Fornavn */}
         <motion.h1
           className="md:text-[11vw] text-6xl font-semibold"
           variants={nameVariants}
@@ -39,7 +40,7 @@ export default function Home() {
           JØRGEN
         </motion.h1>
 
-        {/* Etternavn slidere inn fra høyre, med litt delay */}
+        {/* Etternavn */}
         <motion.h1
           className="md:text-[11vw] text-6xl font-semibold mb-4 w-full text-right"
           variants={nameVariants}
@@ -51,7 +52,7 @@ export default function Home() {
         </motion.h1>
         <Rotate />
 
-        {/* Undertekst fader inn med delay */}
+        {/* Undertekst */}
         <motion.section
           className="mb-12"
           variants={subtitleVariants}
@@ -65,17 +66,15 @@ export default function Home() {
         </motion.section>
       </div>
 
-      {/* ========================= */}
-      {/* Skills-seksjon med lett pop */}
-      {/* ========================= */}
+      {/* Skills-seksjon */}
 
         <Skills />
 
-      {/* ========================= */}
-      {/* AboutMe-seksjon med fade */}
-      {/* ========================= */}
+      {/* AboutMe-seksjon */}
+
         <AboutMe />
         <GitHubLanguagesChart />
+        <ContactMe />
         
     </main>
   );

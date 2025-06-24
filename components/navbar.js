@@ -126,7 +126,7 @@ export default function Navbar() {
        
       </motion.nav>
 
-      {/* Skjuler scrollbar‐visningen ved å sette bredde/høyde til 0 */}
+      {/* Skjuler scrollbar‐visningen */}
     </div>
   );
 }
